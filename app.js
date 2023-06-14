@@ -1,5 +1,10 @@
 // array to store book objects
-let myLibrary = [];
+let obj1 = new Book('RDPD', 'Robert Kiyosaki and Sharon Lechter', 765, 'not read yet');
+let obj2 = new Book ('LDFH', 'A.H. Mohammed', 126, 'read');
+let obj3 = new Book ('Wired', 'Buchanan-Renard', 329, 'not read yet');
+let myLibrary = [obj1, obj2, obj3];
+
+console.log(myLibrary);
 
 
 // Object constructor
@@ -15,10 +20,6 @@ function Book(title, author, pages, status) {
 //     return newBook;
 // }
 
-let newBook = new Book('RDPD', 'Robert Kiyosaki and Sharon Lechter', '765', 'not read yet');
-myLibrary.push(newBook);
-
-console.log(myLibrary);
 
 // function addBookToLibrary() {
 //     myLibrary.push(newBook);
