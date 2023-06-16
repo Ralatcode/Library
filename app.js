@@ -4,7 +4,6 @@ let obj2 = new Book ('LDFH', 'A.H. Mohammed', 126, 'read');
 let obj3 = new Book ('Wired', 'Buchanan-Renard', 329, 'not read yet');
 let myLibrary = [obj1, obj2, obj3];
 
-console.log(myLibrary);
 
 
 // Object constructor
