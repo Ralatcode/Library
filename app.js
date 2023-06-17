@@ -4,6 +4,7 @@ let obj2 = new Book ('LDFH', 'A.H. Mohammed', 126, 'read');
 let obj3 = new Book ('Wired', 'Buchanan-Renard', 329, 'not read yet');
 
 const container = document.querySelector('.container');
+const addBook = document.querySelector('.add-book');
 
 let myLibrary = [obj1, obj2, obj3];
 
@@ -24,6 +25,9 @@ myLibrary.forEach(book =>{
     container.appendChild(bookDiv);
 }); 
 
+addBook.addEventListener('click', ()=>{
+    console.log('clicked me');
+})
 
 
 // Object constructor
