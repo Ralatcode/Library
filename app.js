@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 const addBook = document.querySelector('.add-book');
 const modal = document.getElementById('addBookModal');
+const bookForm = document.getElementById('book-form');
 
 // array to store book objects
 let myLibrary = [];
@@ -32,6 +33,24 @@ window.addEventListener('click', (e) => {
     if (e.target == modal) {
         modal.style.display = 'none';
     }
+})
+
+// get user form input 
+bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let formAuthor = document.getElementById('author');
+    let formTitle = document.getElementById('title');
+    let formPages = document.getElementById('pages');
+    let formStatus = document.getElementsByName('status');
+
+    for (let input of formStatus) {
+        if (input.checked) {
+            formStatus = input.value;
+        }
+    }
+
+    console.log(`${formAuthor.value} by ${formTitle.value} with ${formPages.value} and ${formStatus} radio`);
 })
 
 
