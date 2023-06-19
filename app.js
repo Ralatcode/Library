@@ -5,6 +5,7 @@ let obj3 = new Book ('Wired', 'Buchanan-Renard', 329, 'not read yet');
 
 const container = document.querySelector('.container');
 const addBook = document.querySelector('.add-book');
+const modal = document.getElementById('addBookModal');
 
 let myLibrary = [obj1, obj2, obj3];
 
@@ -25,8 +26,16 @@ myLibrary.forEach(book =>{
     container.appendChild(bookDiv);
 }); 
 
+// opens modal
 addBook.addEventListener('click', ()=>{
-    console.log('clicked me');
+    modal.style.display = 'block';
+})
+
+// close modal by clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
 })
 
 
