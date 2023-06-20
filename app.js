@@ -6,22 +6,6 @@ const bookForm = document.getElementById('book-form');
 // array to store book objects
 let myLibrary = [];
 
-// myLibrary.forEach(book =>{
-//     // create all necesaary html tags for book details
-//     const bookDiv = document.createElement('div');
-//     const bookTitle = document.createElement('h2');
-//     const bookAuthor = document.createElement('h3');
-//     const bookPages = document.createElement('h4');
-//     const bookStatus = document.createElement('h5');
-//     // update the text of html tags to object properties
-//     bookTitle.textContent = book.title;
-//     bookAuthor.textContent = book.author;
-//     bookPages.textContent = book.pages;
-//     bookStatus.textContent = book.status;
-//     // append tags to bookDiv
-//     bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus);
-//     container.appendChild(bookDiv);
-// }); 
 
 // opens modal
 addBook.addEventListener('click', ()=>{
@@ -50,7 +34,11 @@ bookForm.addEventListener('submit', (e) => {
         }
     }
 
-    console.log(`${formAuthor.value} by ${formTitle.value} with ${formPages.value} and ${formStatus} radio`);
+    addBookToLibrary(formTitle.value, formAuthor.value, formPages.value, formStatus);
+
+    formTitle.value = '';
+    formAuthor.value = '';
+    formPages.value = '';
 })
 
 
@@ -63,12 +51,24 @@ function Book(title, author, pages, status) {
 }
 
 
-// function createPrototype() {
-//     let newBook = new Book('RDPD', 'Robert Kiyosaki and Sharon Lechter', '765', 'not read yet');
-//     return newBook;
-// }
 
-
-// function addBookToLibrary() {
-//     myLibrary.push(newBook);
-// }
+function addBookToLibrary(title, author, pages, status) {
+    // create proto from constructor
+    let newBook = new Book(title, author, pages, status);
+    // store new book prototype in array
+    myLibrary.push(newBook);
+    // creates html format for new book
+    const bookDiv = document.createElement('div');
+    const bookTitle = document.createElement('h2');
+    const bookAuthor = document.createElement('h3');
+    const bookPages = document.createElement('h4');
+    const bookStatus = document.createElement('h5');
+    // update the text of html tags to object properties
+    bookTitle.textContent = newBook.title;
+    bookAuthor.textContent = newBook.author;
+    bookPages.textContent = newBook.pages;
+    bookStatus.textContent = newBook.status;
+    // append tags to bookDiv
+    bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus);
+    container.appendChild(bookDiv);
+}
