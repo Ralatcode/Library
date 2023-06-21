@@ -63,6 +63,7 @@ function addBookToLibrary(title, author, pages, status) {
     const bookAuthor = document.createElement('h3');
     const bookPages = document.createElement('h4');
     const bookStatus = document.createElement('h5');
+    bookDiv.classList.add('book-card');
     // update the text of html tags to object properties
     bookTitle.textContent = newBook.title;
     bookAuthor.textContent = newBook.author;
