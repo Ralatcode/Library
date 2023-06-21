@@ -45,6 +45,8 @@ body {
     background-color: rgb(177, 167, 166,0.4);
 }
 
+/* form styling starts */
+
 form {
     position: relative;
     background-color: #2a9d8f;
@@ -57,6 +59,7 @@ form {
     animation-duration: 1s;
 }
 
+/* animates modal window */
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
@@ -107,6 +110,47 @@ label {
 .book-details > p {
     font-size: 1.125rem;
     margin-bottom: .25rem;
+}
+
+/* form styling ends */
+
+/* book card styling */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffcf6;
+    border: 1px solid #cbcbcb;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.book-card > * {
+    font-weight: 400;
+}
+
+.book-card > h2 {
+    font-size: 1.5rem;
+}
+
+.book-card > h3 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.book-card > h4 {
+    font-size: .9rem;
+}
+
+.book-card > h5 {
+    font-size: .75rem;
 }
   
 @media (min-width: 576px) {
