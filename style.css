@@ -67,6 +67,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: auto;
+    opacity: 0;
     background-color: rgb(177, 167, 166);
     background-color: rgb(177, 167, 166,0.4);
     transition: top 1s, opacity .5s;
@@ -75,7 +76,6 @@ body {
 /* form styling starts */
 
 form {
-    position: relative;
     background-color: #2a9d8f;
     margin: 15% auto;
     padding: 2rem;
