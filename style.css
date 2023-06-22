@@ -147,6 +147,8 @@ label {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
+    max-width: 90%;
+    margin: 2rem auto;
 }
 
 .book-card {
@@ -199,5 +201,11 @@ label {
 
     .logo-text {
         font-size: 1.8rem;
+    }
+  }
+
+  @media (min-width: 976px) {
+    .container {
+        max-width: 70%;
     }
   }
