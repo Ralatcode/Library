@@ -63,13 +63,16 @@ function addBookToLibrary(title, author, pages, status) {
     const bookAuthor = document.createElement('h3');
     const bookPages = document.createElement('h4');
     const bookStatus = document.createElement('h5');
+    const deleteBook = document.createElement('button');
+    deleteBook.classList.add('delete-btn');
     bookDiv.classList.add('book-card');
     // update the text of html tags to object properties
     bookTitle.textContent = `Title: ${newBook.title}`;
     bookAuthor.textContent = `Author: ${newBook.author}`;
     bookPages.textContent = `${newBook.pages} pages`;
     bookStatus.textContent = newBook.status;
+    deleteBook.textContent = 'Delete';
     // append tags to bookDiv
-    bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus);
+    bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus, deleteBook);
     container.appendChild(bookDiv);
 }
