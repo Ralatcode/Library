@@ -9,13 +9,13 @@ let myLibrary = [];
 
 // opens modal
 addBook.addEventListener('click', ()=>{
-    modal.style.display = 'block';
+    modal.classList.toggle('show');
 })
 
 // close modal by clicking outside
 window.addEventListener('click', (e) => {
     if (e.target == modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('show');
     }
 })
 

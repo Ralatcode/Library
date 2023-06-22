@@ -39,7 +39,6 @@ body {
     font-weight: 400;
     background-color: #f5f3f4;
     color: #264653;
-    transition: all ease-in 100ms;
 }
 
 .btn-div {
@@ -61,16 +60,16 @@ body {
 }
 
 #addBookModal {
-    display: none;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100vw;
     height: 100vh;
     overflow: auto;
     background-color: rgb(177, 167, 166);
     background-color: rgb(177, 167, 166,0.4);
+    transition: top 1s, opacity .5s;
 }
 
 /* form styling starts */
@@ -83,14 +82,11 @@ form {
     border: 1px solid #b1a7a6;
     border-radius: .25rem;
     width: 80%;
-    animation-name: animatetop;
-    animation-duration: 1s;
 }
 
-/* animates modal window */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+#addBookModal.show {
+    top: 0;
+    opacity: 1;
 }
 
 .book-details {
