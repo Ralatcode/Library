@@ -65,9 +65,9 @@ function addBookToLibrary(title, author, pages, status) {
     const bookStatus = document.createElement('h5');
     bookDiv.classList.add('book-card');
     // update the text of html tags to object properties
-    bookTitle.textContent = newBook.title;
-    bookAuthor.textContent = newBook.author;
-    bookPages.textContent = newBook.pages;
+    bookTitle.textContent = `Title: ${newBook.title}`;
+    bookAuthor.textContent = `Author: ${newBook.author}`;
+    bookPages.textContent = `${newBook.pages} pages`;
     bookStatus.textContent = newBook.status;
     // append tags to bookDiv
     bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus);
