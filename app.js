@@ -82,11 +82,29 @@ function showBookInLibrary() {
     bookPages.textContent = `${lastItem.pages} pages`;
     bookStatus.textContent = lastItem.status;
     deleteBook.textContent = 'Delete';
+    deleteBook.dataset.btnIndex = indexOfBook;
     // append tags to bookDiv
     bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus, deleteBook);
     container.appendChild(bookDiv);
+
+    deleteBook.addEventListener('click', deleteBookEntry);
 }
 
 function closeModal() {
     modal.classList.remove('show');
+}
+
+function deleteBookEntry(e) {
+    let targetBook = e.target.dataset.btnIndex;
+    let books = document.querySelectorAll('.book-card');
+    
+    books = Array.from(books);
+
+    books.forEach((book) => {
+        if (book.dataset.index === targetBook) {
+            book.remove();
+        }
+    })
+
+    myLibrary.splice(targetBook);
 }
