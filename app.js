@@ -40,7 +40,7 @@ bookForm.addEventListener('submit', (e) => {
     formTitle.value = '';
     formAuthor.value = '';
     formPages.value = '';
-    closeModal();
+    // closeModal();
 })
 
 
@@ -107,4 +107,22 @@ function deleteBookEntry(e) {
     })
     // removes targerBook from myLibrary array
     myLibrary.splice(targetBook, 1);
+
+    updateDatasetIndex();
+}
+
+function updateDatasetIndex() {
+    let books = document.querySelectorAll('.book-card');
+    let btnIndex = document.querySelectorAll('.delete-btn');
+    books = Array.from(books);
+    btnIndex = Array.from(btnIndex);
+
+    // updates all index after deletion
+    books.forEach((book) => {
+        book.dataset.index = books.indexOf(book);
+    })
+
+    btnIndex.forEach((btn) => {
+        btn.dataset.btnIndex = btnIndex.indexOf(btn);
+    })
 }
