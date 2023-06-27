@@ -74,6 +74,7 @@ function showBookInLibrary() {
     const deleteBook = document.createElement('button');
     deleteBook.classList.add('delete-btn');
     bookDiv.classList.add('book-card');
+    bookStatus.classList.add('status', lastItem.status);
     bookDiv.dataset.index = indexOfBook;
 
     // update the text of html tags to object properties
@@ -87,11 +88,52 @@ function showBookInLibrary() {
     bookDiv.append(bookTitle, bookAuthor, bookPages, bookStatus, deleteBook);
     container.appendChild(bookDiv);
 
+
+    bookStatus.addEventListener('click', toggleStatus);
     deleteBook.addEventListener('click', deleteBookEntry);
+
+
 }
 
 function closeModal() {
     modal.classList.remove('show');
+}
+
+function toggleStatus(e) {
+    // get book index
+    let position = e.target.parentElement.dataset.index;
+    position = parseInt(position);
+
+    if (e.target.classList.contains('unread')) {
+        let bookProto = myLibrary[position];
+        bookProto.status = 'read';
+        e.target.classList.remove('unread');
+        e.target.classList.add('read');
+        e.target.textContent = 'read';
+    } else if (e.target.classList.contains('read')) {
+        let bookProto = myLibrary[position];
+        bookProto.status = 'unread';
+        e.target.classList.remove('read');
+        e.target.classList.add('unread');
+        e.target.textContent = 'unread';
+    }
+}
+
+
+function updateDatasetIndex() {
+    let books = document.querySelectorAll('.book-card');
+    let btnIndex = document.querySelectorAll('.delete-btn');
+    books = Array.from(books);
+    btnIndex = Array.from(btnIndex);
+
+    // updates all index after deletion
+    books.forEach((book) => {
+        book.dataset.index = books.indexOf(book);
+    })
+
+    btnIndex.forEach((btn) => {
+        btn.dataset.btnIndex = btnIndex.indexOf(btn);
+    })
 }
 
 function deleteBookEntry(e) {
@@ -111,18 +153,3 @@ function deleteBookEntry(e) {
     updateDatasetIndex();
 }
 
-function updateDatasetIndex() {
-    let books = document.querySelectorAll('.book-card');
-    let btnIndex = document.querySelectorAll('.delete-btn');
-    books = Array.from(books);
-    btnIndex = Array.from(btnIndex);
-
-    // updates all index after deletion
-    books.forEach((book) => {
-        book.dataset.index = books.indexOf(book);
-    })
-
-    btnIndex.forEach((btn) => {
-        btn.dataset.btnIndex = btnIndex.indexOf(btn);
-    })
-}
