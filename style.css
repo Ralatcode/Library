@@ -175,9 +175,11 @@ label {
     font-size: .9rem;
 }
 
-.book-card > h5 {
+
+/* status button styling  */
+/* .book-card > h5 {
     font-size: .75rem;
-}
+} */
   
 @media (min-width: 576px) {
     form {
