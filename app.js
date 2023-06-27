@@ -70,7 +70,7 @@ function showBookInLibrary() {
     const bookTitle = document.createElement('h2');
     const bookAuthor = document.createElement('h3');
     const bookPages = document.createElement('h4');
-    const bookStatus = document.createElement('h5');
+    const bookStatus = document.createElement('button');
     const deleteBook = document.createElement('button');
     deleteBook.classList.add('delete-btn');
     bookDiv.classList.add('book-card');
