@@ -40,7 +40,7 @@ bookForm.addEventListener('submit', (e) => {
     formTitle.value = '';
     formAuthor.value = '';
     formPages.value = '';
-    // closeModal();
+    closeModal();
 })
 
 
