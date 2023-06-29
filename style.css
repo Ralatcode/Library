@@ -118,7 +118,7 @@ label {
 .book-details > input:focus {
     border-color: #f4a261;
     outline: none;
-    box-shadow: 0 0 0 0.2rem #e76f51;
+    box-shadow: 0 0 0 0.2rem #e9c46a;
 
 }
 
