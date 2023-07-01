@@ -26,4 +26,4 @@ Check out the live github page - [Click here](https://ralatcode.github.io/Librar
 -  The created prototype is then pushed into an already created empty array, which acts as a storage for all the protypes to be created.
 - The book prototype properties details are then displayed on the DOM as a book card with appropriate classlist used for styling in the stylesheet.
 - To modify the book read status, the status button has a click event listener to toggle the status of the book, which toggles between read and unread status, on click, the parent element of the event target is gotten and dataset value of the book card is used to determine the index of the book clicked. This is used to update the Book instance to the appropriate toggled status and also update the DOM.
-
+- To delete a book entry: each delete button has a click event listener which get the button dataset index used to remove the book card on the DOM and splice the targetbook from the myLibrary array.
