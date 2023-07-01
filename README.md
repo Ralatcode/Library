@@ -2,7 +2,7 @@
 This is the first phase of the Library Project on [The Odin Project](theodinproject.com) fullstack node path course, which involves building a small Library app.
 
 ## Live GitHub Page
-Check out the live gitHub page - [Click here](https://ralatcode.github.io/Library/)
+Check out the live github page - [Click here](https://ralatcode.github.io/Library/)
 
 ## Overview
 
