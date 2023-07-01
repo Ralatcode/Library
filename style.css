@@ -183,11 +183,32 @@ label {
     font-size: .9rem;
 }
 
-
-/* status button styling  */
-/* .book-card > h5 {
+.status {
     font-size: .75rem;
-} */
+    font-family: inherit;
+    text-transform: capitalize;
+    width: 50%;
+    margin: .5rem auto;
+    padding: .75rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    transition: all ease-in 150ms;
+}
+
+.status.read {
+    background-color: #2a9d8f;
+}
+
+.status.unread {
+    background-color: #f4a261;
+}
+
+
+.status:hover {
+    background-color: #e9edc9;
+}
   
 @media (min-width: 576px) {
     form {
