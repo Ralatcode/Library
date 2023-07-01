@@ -4,6 +4,8 @@ This is the first phase of the Library Project on [The Odin Project](theodinproj
 ## Live GitHub Page
 Check out the live gitHub page - [Click here](https://ralatcode.github.io/Library/)
 
+## Overview
+
 ### Tools:
 - Visual Studio Code
 - LInux Terminal
