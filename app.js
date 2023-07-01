@@ -53,7 +53,7 @@ function Book(title, author, pages, status) {
 }
 
 
-
+// creates instance for book item
 function addBookToLibrary(title, author, pages, status) {
     // create proto from constructor
     let newBook = new Book(title, author, pages, status);
@@ -91,8 +91,6 @@ function showBookInLibrary() {
 
     bookStatus.addEventListener('click', toggleStatus);
     deleteBook.addEventListener('click', deleteBookEntry);
-
-
 }
 
 function closeModal() {
@@ -149,7 +147,7 @@ function deleteBookEntry(e) {
     })
     // removes targerBook from myLibrary array
     myLibrary.splice(targetBook, 1);
-
+    // updates dataset of remaining books in the DOM
     updateDatasetIndex();
 }
 
