@@ -139,7 +139,7 @@ function deleteBookEntry(e) {
     let books = document.querySelectorAll('.book-card');
     // convert nodelist to array
     books = Array.from(books);
-    // looks for book with same index as targetBook
+    // looks for book with same index as targetBook and removes it fron DOM
     books.forEach((book) => {
         if (book.dataset.index === targetBook) {
             book.remove();
