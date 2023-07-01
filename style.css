@@ -199,16 +199,35 @@ label {
 
 .status.read {
     background-color: #2a9d8f;
+    color: #fff;
 }
 
 .status.unread {
     background-color: #f4a261;
 }
 
-
 .status:hover {
     background-color: #e9edc9;
     border: 2px solid #d4a373;
+}
+
+.delete-btn {
+    font-size: .75rem;
+    font-family: inherit;
+    width: 80%;
+    margin: .5rem auto;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #faedcd;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    transition: all ease-in-out 100ms;
+}
+
+.delete-btn:hover {
+    background-color: #e76f51;
+    color: white;
 }
   
 @media (min-width: 576px) {
