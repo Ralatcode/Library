@@ -194,7 +194,7 @@ label {
     border-radius: .5rem;
     outline: none;
     border: none;
-    transition: all ease-in 150ms;
+    transition: all ease-in-out 100ms;
 }
 
 .status.read {
@@ -208,6 +208,7 @@ label {
 
 .status:hover {
     background-color: #e9edc9;
+    border: 2px solid #d4a373;
 }
   
 @media (min-width: 576px) {
