@@ -45,7 +45,6 @@ bookForm.addEventListener('submit', (e) => {
 
 
 // close modal on esc key pressed
-
 window.addEventListener('keydown', (e) => {
     if (e.key == 'Escape') {
         if (modal.classList.contains("show")) {
