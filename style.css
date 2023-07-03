@@ -228,6 +228,10 @@ label {
     border: 2px solid #d4a373;
 }
 
+.read:hover {
+    color: #495057;
+}
+
 .delete-btn {
     font-size: .75rem;
     font-family: inherit;
