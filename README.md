@@ -10,7 +10,7 @@ Check out the live github page - [Click here](https://ralatcode.github.io/Librar
 - Visual Studio Code
 - LInux Terminal
 - Git & GitHub
-- 
+- ESLint & AirBnb Javascript Style Guide
 
 ### Built and practised:
 - Semantic HTML5 markup
