@@ -7,6 +7,11 @@
     padding: 0;
 }
 
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
 header {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -39,7 +44,6 @@ body {
     font-weight: 400;
     background-color: #f5f3f4;
     color: #264653;
-    min-height: 100vh;
 }
 
 .btn-div {
@@ -72,6 +76,10 @@ body {
     background-color: rgb(177, 167, 166);
     background-color: rgb(177, 167, 166,0.4);
     transition: top 1s, opacity .5s;
+}
+
+main {
+    margin-bottom: 5rem;
 }
 
 /* form styling starts */
