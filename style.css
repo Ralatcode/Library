@@ -39,6 +39,7 @@ body {
     font-weight: 400;
     background-color: #f5f3f4;
     color: #264653;
+    min-height: 100vh;
 }
 
 .btn-div {
@@ -249,6 +250,40 @@ label {
 .delete-btn:hover {
     background-color: #e76f51;
     color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: .25rem;
+    margin: .5rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer > p {
+    font-size: 1.15rem;
+    color: #264653;
+}
+
+.fa-github {
+    color: #e76f51;
+    font-size: 1.6rem;
+    transition: transform 0.4s ease-in-out ;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.source-code:hover {
+    color: #e76f51;
 }
   
 @media (min-width: 576px) {
