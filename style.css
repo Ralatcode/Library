@@ -302,6 +302,14 @@ footer > p {
 .source-code:hover {
     color: #e76f51;
 }
+
+@media (max-width: 425px) {
+    form {
+        width: 90%;
+        margin: 30% auto 0;
+        padding: 2.25rem 1rem;
+    }
+}
   
 @media (min-width: 576px) {
     form {
