@@ -204,18 +204,18 @@ label[for = 'unread'] {
 }
 
 .book-card > h2 {
-    font-size: 1.5rem;
-    margin-bottom: .5rem;
+    font-size: 1.75rem;
+    margin-bottom: .75rem;
 }
 
 .book-card > h3 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     text-transform: capitalize;
 }
 
 .book-card > h4 {
-    font-size: .9rem;
-    margin: .35rem 0;
+    font-size: 1.15rem;
+    margin: .75rem 0;
     text-transform: capitalize;
 }
 
@@ -224,7 +224,7 @@ label[for = 'unread'] {
     font-family: inherit;
     text-transform: capitalize;
     width: 50%;
-    margin: .5rem auto;
+    margin: .75rem auto;
     padding: .75rem;
     cursor: pointer;
     border-radius: .5rem;
