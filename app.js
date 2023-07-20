@@ -3,6 +3,7 @@ const container = document.querySelector('.container');
 const addBook = document.querySelector('.add-book');
 const modal = document.getElementById('addBookModal');
 const bookForm = document.getElementById('book-form');
+const closeModalBtn = document.querySelector('.close-btn');
 
 // array to store book objects
 const myLibrary = [];
@@ -157,3 +158,5 @@ window.addEventListener('keydown', (e) => {
     }
   }
 });
+
+closeModalBtn.addEventListener('click', closeModal);

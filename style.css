@@ -100,12 +100,16 @@ form {
     content: '';
     display: block;
     position: absolute;
-    background-color: #f4a261;
+    background-color: #e76f51;
     width: 1.25rem;
     height: 3px;
     top: 1.25rem;
     right: 1rem;
     bottom: 0;
+}
+
+.close-btn {
+    cursor: pointer;
 }
 
 .close-btn::before {
