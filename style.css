@@ -189,6 +189,7 @@ label[for = 'unread'] {
     padding: 1rem;
     background-color: #e76f51;
     font: inherit;
+    font-size: 1.15rem;
     color: #fff;
     border-radius: 2px;
     cursor: pointer;
