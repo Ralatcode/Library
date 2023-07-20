@@ -86,12 +86,34 @@ main {
 /* form styling starts */
 
 form {
+    position: relative;
     background-color: #eee;
     margin: 15% auto;
     padding: 3rem 2rem;
     border: 1px solid #b1a7a6;
     border-radius: .25rem;
     width: 80%;
+}
+
+
+.close-btn::before, .close-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #f4a261;
+    width: 1.25rem;
+    height: 3px;
+    top: 1.25rem;
+    right: 1rem;
+    bottom: 0;
+}
+
+.close-btn::before {
+    transform: rotate(45deg);
+}
+
+.close-btn::after {
+    transform: rotate(-45deg);
 }
 
 /* hide arrow for book page number */
