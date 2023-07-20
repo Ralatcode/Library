@@ -133,6 +133,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+input[type=radio] {
+    accent-color: #e76f51;
+}
+
 #addBookModal.show {
     top: 0;
     opacity: 1;
