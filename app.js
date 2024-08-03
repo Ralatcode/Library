@@ -7,12 +7,22 @@ const closeModalBtn = document.querySelector('.close-btn');
 
 // array to store book objects
 const myLibrary = [];
-// Object constructor
-function Book(title, author, pages, status) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = status;
+// Book Class
+class Book {
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
+
+  updateStatus() {
+    if (this.status === 'read') {
+      this.status = 'unread';
+    } else if (this.status === 'unread') {
+      this.status = 'read';
+    }
+  }
 }
 
 // creates instance for book item
@@ -30,13 +40,13 @@ function toggleStatus(e) {
 
   if (e.target.classList.contains('unread')) {
     const bookProto = myLibrary[position];
-    bookProto.status = 'read';
+    bookProto.updateStatus();
     e.target.classList.remove('unread');
     e.target.classList.add('read');
     e.target.textContent = 'read';
   } else if (e.target.classList.contains('read')) {
     const bookProto = myLibrary[position];
-    bookProto.status = 'unread';
+    bookProto.updateStatus();
     e.target.classList.remove('read');
     e.target.classList.add('unread');
     e.target.textContent = 'unread';
