@@ -7,14 +7,7 @@ const closeModalBtn = document.querySelector('.close-btn');
 
 // array to store book objects
 const myLibrary = [];
-// Object constructor
-// function Book(title, author, pages, status) {
-//   this.title = title;
-//   this.author = author;
-//   this.pages = pages;
-//   this.status = status;
-// }
-
+// Book Class
 class Book {
   constructor(title, author, pages, status) {
     this.title = title;
