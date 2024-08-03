@@ -22,6 +22,14 @@ class Book {
     this.pages = pages;
     this.status = status;
   }
+
+  updateStatus() {
+    if (this.status === 'read') {
+      this.status = 'unread';
+    } else if (this.status === 'unread') {
+      this.status = 'read';
+    }
+  }
 }
 
 // creates instance for book item
