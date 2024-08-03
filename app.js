@@ -47,13 +47,13 @@ function toggleStatus(e) {
 
   if (e.target.classList.contains('unread')) {
     const bookProto = myLibrary[position];
-    bookProto.status = 'read';
+    bookProto.updateStatus();
     e.target.classList.remove('unread');
     e.target.classList.add('read');
     e.target.textContent = 'read';
   } else if (e.target.classList.contains('read')) {
     const bookProto = myLibrary[position];
-    bookProto.status = 'unread';
+    bookProto.updateStatus();
     e.target.classList.remove('read');
     e.target.classList.add('unread');
     e.target.textContent = 'unread';
